@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var ResultadoLabel: UILabel!
     
+    var calc = CalculadoraClass();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,7 +25,13 @@ class ViewController: UIViewController {
     }
     
     
-
+    @IBAction func NumeroClick(_ sender: Any) {
+        
+        //var res = calc.soma(a:10);
+        
+        ResultadoLabel.text = String(calc.soma(a:10));
+    }
+    
 
 }
 

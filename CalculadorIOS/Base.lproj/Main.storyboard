@@ -75,7 +75,7 @@
                                     <color key="titleShadowColor" red="0.037887014310000001" green="0.1114817565" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="Click_7" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ked-7f-alY"/>
+                                    <action selector="NumeroClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q22-1l-BiU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1n-Dl-Cia">
