@@ -12,11 +12,13 @@ class CalculadoraClass{
     var operando:Float;
     var operacao:Int;
     let RESULTADO = -1;
-    /*public static final int ADICAO = 0;
-    public static final int SUBTRACAO = 1;
-    public static final int MULTIPLICACAO = 2;
-    public static final int DIVISAO = 3;
-    public static  final int RAIZ =4;*/
+    let ADICAO = 0;
+    let SUBTRACAO = 1;
+    let MULTIPLICACAO = 2;
+    let DIVISAO = 3;
+    let RAIZ = 4;
+    
+    var valor:Float = 0;
     
     init() {
         operando = 0.0;
@@ -31,5 +33,53 @@ class CalculadoraClass{
     func reseta()->Void{
         operando = 0.0;
         operacao = RESULTADO;
+    }
+    
+    func calcula(valor:Float, operacao:Int, fator:Float)->Float {
+        self.valor = valor;
+        
+        if (self.operacao == RESULTADO) {
+            self.operacao = operacao;
+            operando = valor;
+            return operando;
+        }
+    
+        //se fator != espera-se que seja feito a operação com a % do valor anterior (operando)
+        if(fator != 1) {
+            //valor = operando * fator;
+            self.valor = operando * fator;
+        }
+        
+        /*
+        switch (this.operacao) {
+            case ADICAO: {
+            operando += valor;
+            break;
+            }
+            case SUBTRACAO: {
+            operando -= valor;
+            break;
+            }
+            case MULTIPLICACAO: {
+            operando *= valor;
+            break;
+            }
+            case DIVISAO: {
+            operando /= valor;
+            break;
+            }
+            case RAIZ: {
+            //retorna a raiz do valor
+            operando = (float) Math.sqrt(valor);
+            break;
+            }
+            default: {
+            break;
+            }
+        }
+ */
+        
+        self.operacao = operacao;
+        return operando;
     }
 }
