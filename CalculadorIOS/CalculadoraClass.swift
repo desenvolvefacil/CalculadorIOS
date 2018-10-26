@@ -26,4 +26,10 @@ class CalculadoraClass{
     func soma(a:Float) -> Float {
         return a + 1;
     }
+    
+    //reseta os valores da calculadora
+    func reseta()->Void{
+        operando = 0.0;
+        operacao = RESULTADO;
+    }
 }

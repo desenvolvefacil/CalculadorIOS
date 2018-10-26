@@ -29,11 +29,16 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func NumeroClick(_ sender: Any) {
+    @IBAction func NumeroClick(_ sender: UIButton) {
         
-        //var res = calc.soma(a:10);
+        if (!concatenaLcd) {
+            ResultadoLabel.text = "";
+        }
         
-        ResultadoLabel.text = String(calc.soma(a:10));
+        ResultadoLabel.text = ResultadoLabel.text!+sender.currentTitle!;
+        
+        //lcd.append(String.valueOf(botao.getText().toString()));
+        concatenaLcd = true;
     }
     
     
@@ -44,8 +49,8 @@ class ViewController: UIViewController {
     
 
     @IBAction func CClick(_ sender: UIButton) {
-        //calculadora.reseta();
-        ResultadoLabel.text
+        calc.reseta();
+        ResultadoLabel.text = "0";
         concatenaLcd = false;
     }
 }
