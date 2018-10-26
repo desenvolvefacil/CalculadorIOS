@@ -50,13 +50,13 @@ class CalculadoraClass{
             self.valor = operando * fator;
         }
         
-        /*
-        switch (this.operacao) {
-            case ADICAO: {
-            operando += valor;
-            break;
-            }
-            case SUBTRACAO: {
+        
+        switch self.operacao {
+            case ADICAO:
+                operando = operando + valor;
+                break;
+            
+            /*case SUBTRACAO: {
             operando -= valor;
             break;
             }
@@ -72,12 +72,12 @@ class CalculadoraClass{
             //retorna a raiz do valor
             operando = (float) Math.sqrt(valor);
             break;
-            }
-            default: {
-            break;
-            }
+            }*/
+            default:
+                break;
+            
         }
- */
+ 
         
         self.operacao = operacao;
         return operando;
