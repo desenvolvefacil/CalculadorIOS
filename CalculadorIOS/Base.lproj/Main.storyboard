@@ -233,7 +233,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="ResultadoLabel" destination="5I0-fX-7Jv" id="Nk2-8d-8SS"/>
+                        <outlet property="ResultadoLabel" destination="5I0-fX-7Jv" id="48g-EY-0Zt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

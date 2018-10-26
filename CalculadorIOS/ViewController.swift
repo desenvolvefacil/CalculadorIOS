@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var ResultadoLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,9 +24,6 @@ class ViewController: UIViewController {
     
     
 
-    @IBAction func Click_7() {
-        ResultadoLabel.text = "7";
-    }
-    
+
 }
 
