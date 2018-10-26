@@ -45,7 +45,7 @@ class ViewController: UIViewController {
 
     @IBAction func CClick(_ sender: UIButton) {
         //calculadora.reseta();
-        lcd.setText("0");
+        ResultadoLabel.text
         concatenaLcd = false;
     }
 }
