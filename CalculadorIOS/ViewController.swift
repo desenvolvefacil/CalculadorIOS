@@ -12,6 +12,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var ResultadoLabel: UILabel!
     
+    var concatenaLcd:Bool = false;
+    //variavel multiplicadora de %
+    var fator:Float = 1;
+    
     var calc = CalculadoraClass();
     
     override func viewDidLoad() {
@@ -32,6 +36,17 @@ class ViewController: UIViewController {
         ResultadoLabel.text = String(calc.soma(a:10));
     }
     
+    
+    @IBAction func CeClick(_ sender: UIButton) {
+        ResultadoLabel.text = "0";
+        concatenaLcd = false;
+    }
+    
 
+    @IBAction func CClick(_ sender: UIButton) {
+        //calculadora.reseta();
+        lcd.setText("0");
+        concatenaLcd = false;
+    }
 }
 
