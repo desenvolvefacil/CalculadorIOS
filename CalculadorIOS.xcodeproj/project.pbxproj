@@ -12,6 +12,7 @@
 		860C52B32182830000826200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860C52B12182830000826200 /* Main.storyboard */; };
 		860C52B52182830000826200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860C52B42182830000826200 /* Assets.xcassets */; };
 		860C52B82182830000826200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860C52B62182830000826200 /* LaunchScreen.storyboard */; };
+		860C52C0218296E900826200 /* CalculadoraClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C52BF218296E900826200 /* CalculadoraClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		860C52B42182830000826200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		860C52B72182830000826200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		860C52B92182830000826200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		860C52BF218296E900826200 /* CalculadoraClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				860C52B42182830000826200 /* Assets.xcassets */,
 				860C52B62182830000826200 /* LaunchScreen.storyboard */,
 				860C52B92182830000826200 /* Info.plist */,
+				860C52BF218296E900826200 /* CalculadoraClass.swift */,
 			);
 			path = CalculadorIOS;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860C52C0218296E900826200 /* CalculadoraClass.swift in Sources */,
 				860C52B02182830000826200 /* ViewController.swift in Sources */,
 				860C52AE2182830000826200 /* AppDelegate.swift in Sources */,
 			);
