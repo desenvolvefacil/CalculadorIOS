@@ -56,23 +56,23 @@ class CalculadoraClass{
                 operando = operando + valor;
                 break;
             
-            /*case SUBTRACAO: {
-            operando -= valor;
-            break;
-            }
-            case MULTIPLICACAO: {
-            operando *= valor;
-            break;
-            }
-            case DIVISAO: {
-            operando /= valor;
-            break;
-            }
-            case RAIZ: {
+            case SUBTRACAO:
+                operando = operando - valor;
+                break;
+            
+            case MULTIPLICACAO:
+                operando = operando * valor;
+                break;
+            
+            case DIVISAO:
+                operando = operando / valor;
+                break;
+            
+            case RAIZ:
             //retorna a raiz do valor
-            operando = (float) Math.sqrt(valor);
-            break;
-            }*/
+                operando = sqrt(valor);
+                break;
+            
             default:
                 break;
             
