@@ -70,14 +70,85 @@ class ViewController: UIViewController {
             fator = valorAtual / 100;
             
             ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.RESULTADO, fator: fator))
-            
-            /*lcd.setText(Float.toString(calculadora.calcula(
-                Float.parseFloat(lcd.getText().toString()),
-                Calculadora.RESULTADO, fator)));
-            */
+
             concatenaLcd = false;
         }
     }
+    
+    @IBAction func SomaClick(_ sender: UIButton) {
+        
+        if let valorAtual = Float(ResultadoLabel.text!){
+        
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.ADICAO, fator: fator))
+            
+            concatenaLcd = false;
+            
+        }
+    }
+    
+    
+    @IBAction func SubtracaoClick(_ sender: UIButton) {
+        if let valorAtual = Float(ResultadoLabel.text!){
+            
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.SUBTRACAO, fator: fator))
+            
+            concatenaLcd = false;
+            
+        }
+    }
+    
+    
+    @IBAction func MultiplicacaoClick(_ sender: UIButton) {
+        
+        if let valorAtual = Float(ResultadoLabel.text!){
+            
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.MULTIPLICACAO, fator: fator))
+            
+            concatenaLcd = false;
+            
+        }
+        
+    }
+    
+    
+    @IBAction func DivisaoClick(_ sender: UIButton) {
+        
+        if let valorAtual = Float(ResultadoLabel.text!){
+            
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.DIVISAO, fator: fator))
+            
+            concatenaLcd = false;
+            
+        }
+        
+    }
+    
+    @IBAction func ResultadoClick(_ sender: UIButton) {
+        
+        if let valorAtual = Float(ResultadoLabel.text!){
+            
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.RESULTADO, fator: fator))
+            
+            concatenaLcd = false;
+            
+        }
+        
+        
+    }
+    
+    @IBAction func RaizClick(_ sender: UIButton) {
+
+        if let valorAtual = Float(ResultadoLabel.text!){
+    
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.RAIZ, fator: fator));
+            
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.RESULTADO, fator: fator))
+            
+ 
+            concatenaLcd = false;
+        }
+    }
+    
     
     @IBAction func CeClick(_ sender: UIButton) {
         ResultadoLabel.text = "0";
