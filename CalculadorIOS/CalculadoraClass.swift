@@ -48,6 +48,8 @@ class CalculadoraClass{
         if(fator != 1) {
             //valor = operando * fator;
             self.valor = operando * fator;
+            
+            return self.valor;
         }
         
         

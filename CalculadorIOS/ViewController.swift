@@ -71,7 +71,11 @@ class ViewController: UIViewController {
             
             ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.RESULTADO, fator: fator))
 
+            //ResultadoLabel.text = String(fator);
+            
             concatenaLcd = false;
+            
+            fator = 1;
         }
     }
     
@@ -83,6 +87,7 @@ class ViewController: UIViewController {
             
             concatenaLcd = false;
             
+            fator = 1;
         }
     }
     
@@ -94,6 +99,7 @@ class ViewController: UIViewController {
             
             concatenaLcd = false;
             
+            fator = 1;
         }
     }
     
@@ -105,7 +111,8 @@ class ViewController: UIViewController {
             ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.MULTIPLICACAO, fator: fator))
             
             concatenaLcd = false;
-            
+         
+            fator = 1;
         }
         
     }
@@ -119,6 +126,7 @@ class ViewController: UIViewController {
             
             concatenaLcd = false;
             
+            fator = 1;
         }
         
     }
@@ -131,6 +139,7 @@ class ViewController: UIViewController {
             
             concatenaLcd = false;
             
+            fator = 1;
         }
         
         
@@ -146,6 +155,8 @@ class ViewController: UIViewController {
             
  
             concatenaLcd = false;
+            
+            fator = 1;
         }
     }
     
