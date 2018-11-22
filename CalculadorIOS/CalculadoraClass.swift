@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class CalculadoraClass{
     var operando:Float;
     var operacao:Int;
@@ -19,6 +20,8 @@ class CalculadoraClass{
     let RAIZ = 4;
     
     var valor:Float = 0;
+    
+    
     
     init() {
         operando = 0.0;

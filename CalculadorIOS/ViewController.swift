@@ -8,6 +8,13 @@
 
 import UIKit
 
+//extensão para arredondar os valores 0 após o ponto
+extension Float {
+    var clean: String {
+        return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
+    }
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var ResultadoLabel: UILabel!
@@ -17,6 +24,8 @@ class ViewController: UIViewController {
     var fator:Float = 1;
     
     var calc = CalculadoraClass();
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,13 +78,16 @@ class ViewController: UIViewController {
             //define a % do fator para multiplicação do valor
             fator = valorAtual / 100;
             
-            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.RESULTADO, fator: fator))
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.RESULTADO, fator: fator).clean);
 
             //ResultadoLabel.text = String(fator);
             
+            fator = 1;
+            
+            
             concatenaLcd = false;
             
-            fator = 1;
+            
         }
     }
     
@@ -83,7 +95,7 @@ class ViewController: UIViewController {
         
         if let valorAtual = Float(ResultadoLabel.text!){
         
-            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.ADICAO, fator: fator))
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.ADICAO, fator: fator).clean);
             
             concatenaLcd = false;
             
@@ -95,7 +107,7 @@ class ViewController: UIViewController {
     @IBAction func SubtracaoClick(_ sender: UIButton) {
         if let valorAtual = Float(ResultadoLabel.text!){
             
-            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.SUBTRACAO, fator: fator))
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.SUBTRACAO, fator: fator).clean);
             
             concatenaLcd = false;
             
@@ -108,8 +120,7 @@ class ViewController: UIViewController {
         
         if let valorAtual = Float(ResultadoLabel.text!){
             
-            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.MULTIPLICACAO, fator: fator))
-            
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.MULTIPLICACAO, fator: fator).clean);
             concatenaLcd = false;
          
             fator = 1;
@@ -122,8 +133,7 @@ class ViewController: UIViewController {
         
         if let valorAtual = Float(ResultadoLabel.text!){
             
-            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.DIVISAO, fator: fator))
-            
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.DIVISAO, fator: fator).clean);
             concatenaLcd = false;
             
             fator = 1;
@@ -135,7 +145,7 @@ class ViewController: UIViewController {
         
         if let valorAtual = Float(ResultadoLabel.text!){
             
-            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.RESULTADO, fator: fator))
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.RESULTADO, fator: fator).clean);
             
             concatenaLcd = false;
             
@@ -151,7 +161,7 @@ class ViewController: UIViewController {
     
             ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.RAIZ, fator: fator));
             
-            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.RESULTADO, fator: fator))
+            ResultadoLabel.text = String(calc.calcula(valor: valorAtual, operacao: calc.RESULTADO, fator: fator).clean)
             
  
             concatenaLcd = false;
@@ -172,5 +182,7 @@ class ViewController: UIViewController {
         ResultadoLabel.text = "0";
         concatenaLcd = false;
     }
+    
+    
 }
 
