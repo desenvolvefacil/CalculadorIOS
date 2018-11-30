@@ -8,12 +8,19 @@
 
 import UIKit
 
+
+
+
 //extensão para arredondar os valores 0 após o ponto
 extension Float {
     var clean: String {
         return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
     }
 }
+
+
+
+
 
 class ViewController: UIViewController {
 
