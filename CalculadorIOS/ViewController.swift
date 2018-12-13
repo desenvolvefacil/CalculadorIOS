@@ -18,6 +18,7 @@ extension Float {
 class ViewController: UIViewController {
 
     @IBOutlet weak var ResultadoLabel: UILabel!
+    @IBOutlet weak var FundoLabel: UILabel!
     
     var concatenaLcd:Bool = false;
     //variavel multiplicadora de %
@@ -25,11 +26,10 @@ class ViewController: UIViewController {
     
     var calc = CalculadoraClass();
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.FundoLabel.layer.cornerRadius = 10;
     }
 
     override func didReceiveMemoryWarning() {
